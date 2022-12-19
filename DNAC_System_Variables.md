@@ -114,4 +114,26 @@ These steps will set **selected_interfaces** to be an object that will contain t
 
 Note:  If you are following along, don't forget to save your template before moving on.
 
-Now would be a good time to use the **Simulation** feature of the Cisco DNAC Template Editor.  [Click here to explore the Simulator](./Simulations.md).
+Now would be a good time to use the **Simulation** feature of the Cisco DNAC Template Editor to check our work.  [Click here to explore the Simulator](./Simulations.md).
+
+
+#### One More Example
+
+Lastly let's take a look at using a different system variable.  This very simple 4-line template will check the snmp location field on a device, and if it is empty, it will fill in the field with the location specified by the subdomain in the device FQDN.  For example, if the hostname is switch1.boston.mycompany.com, it will place "boston" in the snmp location field.  This is a very simple example, but it does show how to pull information from a system variable and manipulate it for your own needs.
+
+![json](./images/set_snmp_location.png?raw=true "Import JSON") 
+
+'''
+{% if __device.snmpLocation == ''  %}
+    {% set snmp_location  = __device.hostname | split(".") %}
+    snmp-server location {{ snmp_location[1] }}
+{% endif %}
+
+'''
+
+#### Wrapping Up
+
+Hopefully, this document helped you to get an idea of what system variables are and how they can be used with the Cisco DNAC Template Editor.  System Variables help to reduce manual entry and errors, make your templates more flexible so you need less of them and ease provisioning.  Thanks for reading!
+
+
+
