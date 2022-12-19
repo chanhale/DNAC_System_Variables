@@ -110,9 +110,11 @@ We can select our new variable **selected_interfaces** and apply the settings ne
 
 ![json](./images/Input_Form.png?raw=true "Import JSON") 
 
-These steps will set **selected_interfaces** to be an object that will contain the port names of the target switch that are selected by the operator at runtime.  We are giving the operator access to the contents of **__interface[interface]** for each interface and allowing them to select the specific values they want added to the **selected_interfaces** object.  Note that you can also use this view to filter on an attribute, so if the if statement only had a single option, you could apply it here as a filter.
+These steps will set **selected_interfaces** to be an object that will contain the interfaces of the target switch that are selected by the operator at runtime.  We are giving the operator access to the contents of **__interface[interface]** for each interface and allowing them to select the specific interfaces they want added to the **selected_interfaces** object.  Note that you can also use this UI to filter on an attribute, so if the if statement only had a single option, you could apply it here as a filter.
 
 Note:  If you are following along, don't forget to save your template before moving on.
+
+#### Simulations
 
 Now is a good time to discuss the **Simulation** feature of the Cisco DNAC Template Editor.  If you want to verify that the template is going to operate as expected, you can use the Simulator to run through the logic of your template and generate the output configuration for a target device.  This will not make any changes to your devices and can be a good way to test your templates as you work through them.  
 
