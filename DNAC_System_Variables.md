@@ -108,6 +108,6 @@ Next we need to specify that this variable is going to be bound.  If we go to th
 
 We can select our new variable **selected_interfaces** and apply the settings needed to make this a multi-select from a list of interfaces on a device.
 
-![json](./images/calculator_icon.png?raw=true "Import JSON") 
+![json](./images/Input_Form.png?raw=true "Import JSON") 
 
 These steps will set **selected_interfaces** to be an object that will contain the port names of the target switch that are selected by the operator at runtime.  We are giving the operator access to the contents of __interface[interface].portName for each interface and allowing them to select the specific values they want added to the **selected_interfaces** object.
