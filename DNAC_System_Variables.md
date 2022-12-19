@@ -100,7 +100,7 @@ vlan {{ voice_vlan }}
 
 ```
 
-Note:  If you are following along, don't forget to save your template before moving on.
+Note:  If you are following along, don't forget to save your template before moving on.  We could remove the if statement if we're confident our operators will only choose unconfigured physical interfaces, but we'll leave it in for this example.
 
 Next we need to specify that this variable is going to be bound.  If we go to the **Input Form** view by clicking on the calculator icon:
 
@@ -110,7 +110,7 @@ We can select our new variable **selected_interfaces** and apply the settings ne
 
 ![json](./images/Input_Form.png?raw=true "Import JSON") 
 
-These steps will set **selected_interfaces** to be an object that will contain the port names of the target switch that are selected by the operator at runtime.  We are giving the operator access to the contents of **__interface[interface].portName** for each interface and allowing them to select the specific values they want added to the **selected_interfaces** object.
+These steps will set **selected_interfaces** to be an object that will contain the port names of the target switch that are selected by the operator at runtime.  We are giving the operator access to the contents of **__interface[interface]** for each interface and allowing them to select the specific values they want added to the **selected_interfaces** object.
 
 Note:  If you are following along, don't forget to save your template before moving on.
 
@@ -127,4 +127,10 @@ Next, click **Create Simulation**.  When you reach the Simulation Input Page, yo
 When you reach the Simulation Input Page, you'll have to give the simulation a name and then supply values for any variables.  For our bound variables to work, we also need to supply a target device to test against.
 
 ![json](./images/simulation_input.png?raw=true "Import JSON")
+
+Once you've selected a device, then you'll see our **selected_interfaces** options and can select the ones you want to test with:
+
+![json](./images/interfaces_options.png?raw=true "Import JSON")
+
+Once you have completed your selections, click the run button at the bottom right of the screen.
 
