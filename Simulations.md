@@ -20,3 +20,11 @@ Once you've selected a device, then you'll see our **selected_interfaces** optio
 
 Once you have completed your selections, click the run button at the bottom right of the screen.
 
+If your Simulation was successful, meaning that there were no syntax errors that caused the simulation to fail to render configuration, the resulting configuration will show in the right-hand side of the window:
+
+![json](./images/simulation_output.png?raw=true "Import JSON")
+
+Note that due to Jinja2 whitespace handling, the configuration may be messy, but these whitespace issues will not affect provisioning.
+
+This output provides highly beneficial detail on what configuration would be pushed to a target device based on our template logic and allows the architect to ensure that the template will render as expected when it is time to provision.
+
