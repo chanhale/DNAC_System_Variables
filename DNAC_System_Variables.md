@@ -114,25 +114,4 @@ These steps will set **selected_interfaces** to be an object that will contain t
 
 Note:  If you are following along, don't forget to save your template before moving on.
 
-#### Simulations
-
-Now is a good time to discuss the **Simulation** feature of the Cisco DNAC Template Editor.  If you want to verify that the template is going to operate as expected, you can use the Simulator to run through the logic of your template and generate the output configuration for a target device.  This will not make any changes to your devices and can be a good way to test your templates as you work through them.  
-
-You can access the Simulator by clicking on the "play" icon in the top left.
-
-![json](./images/play_icon.png?raw=true "Import JSON")
-
-Next, click **Create Simulation**.  When you reach the Simulation Input Page, you'll have to give the simulation a name and then supply values for any variables.  For our bound variables to work, we also need to supply a target device to test against.
-
-![json](./images/create_simulation.png?raw=true "Import JSON")
-
-When you reach the Simulation Input Page, you'll have to give the simulation a name and then supply values for any variables.  For our bound variables to work, we also need to supply a target device to test against.
-
-![json](./images/simulation_input.png?raw=true "Import JSON")
-
-Once you've selected a device, then you'll see our **selected_interfaces** options and can select the ones you want to test with:
-
-![json](./images/interfaces_options.png?raw=true "Import JSON")
-
-Once you have completed your selections, click the run button at the bottom right of the screen.
-
+Now would be a good time to use the **Simulation** feature of the Cisco DNAC Template Editor.  [Click here to explore the Simulator](./Simulations.md).
