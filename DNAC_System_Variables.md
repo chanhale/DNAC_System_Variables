@@ -26,7 +26,12 @@ Note that when you access the Template System Variables window, all variables ar
 
 ![json](./images/template_system_main.png?raw=true "Import JSON") 
 
+To continue with our example of using the **__interface** system variable, we can expand this variable entry in the Template System Variables window and see all of the data points available with this object:
 
+![json](./images/template_system_interfaces_1.png?raw=true "Import JSON") 
+![json](./images/template_system_interfaces_2.png?raw=true "Import JSON") 
+![json](./images/template_system_interfaces_3.png?raw=true "Import JSON")
+![json](./images/template_system_interfaces_4.png?raw=true "Import JSON")  
 
 See the [Ansible config documentation](https://docs.ansible.com/ansible/latest/reference_appendices/config.html) for more details.  There are many settings that can be adjusted based on the needs of your deployment.  
 
