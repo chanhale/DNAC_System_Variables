@@ -78,5 +78,30 @@ Let's make a single modification to our template.  Here we will remove the refer
 
 ![json](./images/set_vlan_2.png?raw=true "Import JSON") 
 
-test1
+Here is that template if you wish to copy it:
 
+```
+{%- macro access_interface()  %}
+  switchport access vlan {{ access_vlan }}
+  switchport voice vlan {{ voice_vlan }}
+{%- endmacro -%}
+
+vlan {{ access_vlan }}
+  name access
+vlan {{ voice_vlan }}
+  name voice
+
+{% for interface in selected_interfaces %}
+  {% if interface.vlanId == 1 and interface.interfaceType == 'Physical'  %}
+    interface {{ interface.portName }}
+      {{ access_interface() }}
+  {% endif %}
+{% endfor %}
+
+```
+
+Note:  If you are following along, don't forget to save your template before moving on.
+
+Next we need to specify that this variable is going to be bound.  If we go to the **Input Form** view by clicking on the calculator icon:
+
+![json](./images/calculator_icon.png?raw=true "Import JSON") 
