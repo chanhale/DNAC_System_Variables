@@ -106,11 +106,11 @@ Next we need to specify that this variable is going to be bound.  If we go to th
 
 ![json](./images/calculator_icon.png?raw=true "Import JSON") 
 
-We can select our new variable **selected_interfaces** and apply the settings needed to make this a multi-select from a list of interfaces on a device.
+We can select our new variable **selected_interfaces** and apply the settings needed to make this a multi-select field from a list of interfaces on a device.
 
 ![json](./images/Input_Form.png?raw=true "Import JSON") 
 
-These steps will set **selected_interfaces** to be an object that will contain the port names of the target switch that are selected by the operator at runtime.  We are giving the operator access to the contents of **__interface[interface]** for each interface and allowing them to select the specific values they want added to the **selected_interfaces** object.
+These steps will set **selected_interfaces** to be an object that will contain the port names of the target switch that are selected by the operator at runtime.  We are giving the operator access to the contents of **__interface[interface]** for each interface and allowing them to select the specific values they want added to the **selected_interfaces** object.  Note that you can also use this view to filter on an attribute, so if the if statement only had a single option, you could apply it here as a filter.
 
 Note:  If you are following along, don't forget to save your template before moving on.
 
